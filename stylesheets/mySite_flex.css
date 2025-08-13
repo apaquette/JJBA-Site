@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/*
+   Jojo's Bizzare Adventure - Styles
+   Name:	Alex Paquette
+   Date:	02/11/2021
+
+*/
+
+body, div{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+}
+
+div#OP{
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+form{
+	display: flex;
+	flex-flow: column wrap;
+}
+
+div.formRow, div.radio, form {
+	justify-content: flex-start;
+}
+
+div.radio{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+div.formRow > *{
+	flex: 1 1 150px;
+}
+
+div.paragraph, figure, section, h2,table{
+	align-self: center;
+}
+
+fieldset{
+	display: flex;
+	flex-flow: column;
+	margin: 3%;
+}
+
+div.leftSide{
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+}
+
+form.donations{
+	justify-content: left;
+	flex-flow: column;
+}
+
+div.checkout{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+/* ===============================
+   Mobile Styles: 640px or Less
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+	section{
+		display: flex;
+		flex-flow: column;
+	}
+	div.leftSide{
+		display: none;
+	}
+	figure{
+		order: 98;
+	}
+	h1{
+		order: 99;
+	}
+	div.paragraph, section{
+		order: 100;
+	}
+	div#OP{
+		order: 101
+	}
+	center,table{
+		order: 103;
+	}
+	footer{
+		order: 104;
+	}
+}
+
+/* ===============================
+   Desktop Styles: 640px or More
+   ===============================
+*/
+@media only screen and (min-width: 641px) {
+	ul{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+}

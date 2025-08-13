@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: jojo;
+	src: url(jojo.woff) format('woff'),
+	     url(jojo.ttf) format('ttf');
+}
+
+/*
+   Jojo's Bizzare Adventure - Styles
+   Name:	Alex Paquette
+   Date:	02/11/2021
+
+*/
+
+/* HTML Styles */
+html {
+	background-attachment: fixed;
+	background-image: url(../images/background.jpg);
+	background-color: white;
+	font-size: 12px;
+	font-family: arial;
+}
+
+div.leftSide{
+	width:40%;
+	background: #0f52ba;
+	color: white;
+}
+
+/* Page Body Styles */
+body {
+	background-color: pink;
+	box-shadow: 30px 0px 45px rgb(31, 31, 31), -30px 0px 45px rgb(31, 31, 31);
+	margin-left: auto;
+	margin-right: auto;
+	color: #654321;
+	font-size: 1.5em;
+}
+
+/* Footer Styles */
+footer {
+	background-color: #a9a9a9;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+/* Set Width to 100%*/
+header, header img, footer, body {
+	width: 100%;
+}
+
+/* Nav Bar Styles*/
+nav{
+	background-color: rgb(111,88,201);
+}
+
+li{
+	text-align: center;
+	width: 20%;
+	color: white;
+	line-height: 2.5em;
+	font-size: 0.8em;
+}
+
+li:hover, li:active {
+	background-color: rgb(126, 120, 210);
+}
+
+nav a:link, nav a:visited {
+	color: white;
+}
+
+a#navicon{
+	display: none;
+}
+
+/* ===============================
+   Mobile Styles: 640px or Less
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+	ul{
+		display: none;
+	}
+	li{
+		width: 100%;
+		text-align: left;
+		padding-left: 5%;
+	}
+	a#navicon{
+		display: block;
+		width: 8%;
+	}
+	a#navicon:hover+ul, nav ul:hover{
+		display: block;
+	}
+	body {
+		font-size: 1em;
+	}
+	div.leftSide{
+		display:none;
+	}
+}
+
+/* ===============================
+   Desktop Styles: 640px or More
+   ===============================
+*/
+@media only screen and (min-width: 641px) {
+	div.main{
+		width:60%;
+	}
+	body{
+		min-width: 880px;
+		max-width: 50%;
+	}
+}

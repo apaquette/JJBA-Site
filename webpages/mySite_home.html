@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+   Jojo's Bizzare Adventure - Home Page
+   Name:	Alex Paquette
+   Date:	02/11/2021
+
+
+   References:
+   Table contents from: https://jojo.fandom.com/wiki/Main_Page#Manga
+
+ -->
+
+<link href="file" rel="stylesheet" />
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="keywords" />
+	<title>Jojo's Bizzare Adventure</title>
+	<link href="../stylesheets/mySite_reset.css" rel="stylesheet"/>
+	<link href="../stylesheets/mySite_styles.css" rel="stylesheet"/>
+	<link href="../stylesheets/mySite_stylesHomePage.css" rel="stylesheet"/>
+	<link href="../stylesheets/mySite_flex.css" rel="stylesheet"/>
+	<script src="../script/checkout.js" async></script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<a id="header" href="mySite_home.html"><img src="../images/header.jpg" alt=""/></a>
+			<a id="navicon"><img src="../images/navicon.png" alt=""/></a>
+			<ul>
+				<li><a href="mySite_PhantomBlood.html">Phantom Blood</a></li>
+				<li><a href="mySite_BattleTendency.html">Battle Tendency</a></li>
+				<li><a href="mySite_StardustCrusaders.html">Stardust Crusaders</a></li>
+				<li><a href="mySite_DiamondIsUnbreakable.html">Diamond is Unbreakable</a></li>
+				<li><a href="mySite_GoldenWind.html">Golden Wind</a></li>
+			 </ul>
+		</nav>
+	</header>
+	<div class="leftSide">
+		<form>
+			<h1>Newsletter</h1>
+			<p><em>Sign up for our newsletter and get all Jojo-related updates!</em></p>
+			<div class="formRow">
+				<label for="name">First Name*</label>
+				<input type="text" required/>
+			</div>
+
+			<div class="formRow">
+				<label for="name">Last Name*</label>
+				<input type="text" required/>
+			</div>
+
+			<div class="formRow">
+				<label for="phone">Phone number</label>
+				<input id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
+			</div>
+
+			<div class="formRow">
+				<label for="email">Email*</label>
+				<input type="email" required/>
+			</div>
+
+			<div class="formRow">
+				<label>Which Jojo part would you like to get news about?<br>(select all that apply)</label>
+				<select size="5" multiple>
+					<option>Phantom Blood</option>
+					<option>Battle Tendency</option>
+					<option>Stardust Crusaders</option>
+					<option>Diamond is Unbreakable</option>
+					<option>Golden Wind</option>
+				</select>
+			</div>
+
+			<div class="formRow">
+				<label>When would you like to receive the newsletter?</label>
+				<select>
+					<option>Daily</option>
+					<option>Weekly</option>
+					<option>Monthly</option>
+					<option>Yearly</option>
+				</select>
+			</div>
+
+			<div class="radio">
+				<label>I want to hear about new merchandise!<br></label>
+				<label for="Yes">Yes</label>
+				<input name="merch" value="yes" type="radio" checked/>
+				<label for="No">No</label>
+				<input name="merch" value="no" type="radio" />
+			</div>
+
+			<div class="formRow">
+				<p><input type="reset" value="Reset"/></p>
+				<p><input type="submit" value="Continue"/></p>
+			</div>
+		</form>
+		<form id="donations" method: "get">
+			<h1>Donations</h1>
+			<p><em>If you want to support what we do at Jojo Wiki, consider donating!</em></p>
+			<fieldset>
+				 <legend>Amounts</legend>
+				 <label><input type="radio" id="donate_0" name="donate" value="1.00" checked/> $1.00</label>
+				 <label><input type="radio" id="donate_1" name="donate" value="5.00" /> $5.00</label>
+				 <label><input type="radio" id="donate_2" name="donate" value="20.00" /> $20.00</label>
+				 <label><input type="radio" id="donate_3" name="donate" value="50.00" /> $50.00</label>
+			</fieldset>
+			<div class = "checkout">
+				<p>Subtotal</p>
+				<input type="text" name="subtotal" id="subtotal" readonly />
+				<p>Transaction Fee (3%)</p>
+				<input type="text" name="transactionFee" id="transactionFee" readonly />
+				<p id = "totalCost">Total</p>
+				<input type="text" name="totalCost" id="totalCost" readonly />
+			</div>
+			<input type="button" id="totalCostButton" value="Proceed to Checkout" />
+		</form>
+	</div>
+	<div class="main">
+		<section>
+			<h1>Summary</h1>
+			<figure>
+				<img src="../images/jojo_logo.png" alt=""/>
+			</figure>
+			<p><strong>JoJo’s Bizarre Adventure</strong> is the story of the Joestar family.
+				Each arc follows the life of another member of the Joestar family, tracing
+				their adventures through the generations. The first arc, <em>Phantom Blood</em>,
+				follows Jonathan Joestar in England during the 1880s. The second arc,
+				<em>Battle Tendency</em>, follows Joseph Joestar in America in the late 1930s.
+				The third arc, <em>Stardust Crusaders</em>, follows Jotaro Kujo as he travels from Japan
+				to Egypt in the late 1980s. The Fourth arc, <em>Diamond is Unbreakable</em>,
+				follows Josuke Higashikata in Japan in 1999. The fifth arc, <em>Golden Wind</em>,
+				follows Giorno Giovanna in Italy in 2001.</p>
+		</section>
+
+		<table>
+			<colgroup>
+				<col id="Date" />
+				<col id="News" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>News</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>12/08/2019</th>
+					<td><em>Thus Spoke Kishibe Rohan OVA</em> episodes <em>At a Confessional</em> and <em>The Run</em> releases in Japanese theaters.</td>
+				</tr>
+
+				<tr>
+					<th>10/26/2019</th>
+					<td>The English dub of <em>JoJo's Bizarre Adventure: Golden Wind</em> premieres on Toonami.</td>
+				</tr>
+
+				<tr>
+					<th>08/18/2019</th>
+					<td><em>Thus Spoke Kishibe Rohan OVA</em> episodes adapting <em>At a Confessional</em> and <em>The Run</em> were announced.</td>
+				</tr>
+
+				<tr>
+					<th>07/28/2019</th>
+					<td>The final episode of <em>Golden Wind</em> airs on TV in Japan.</td>
+				</tr>
+
+				<tr>
+					<th>07/02/2019</th>
+					<td><em>Diamond is Unbreakable, Part 1</em> releases on Blu-ray in North America.</td>
+				</tr>
+
+				<tr>
+					<th>06/08/2019</th>
+					<td>The English dub of the final episode of <em>Diamond is Unbreakable</em> airs on Toonami.</td>
+				</tr>
+
+				<tr>
+					<th>05/07/2019</th>
+					<td><em>Diamond is Unbreakable</em> Volume 1 releases in English.</td>
+				</tr>
+
+				<tr>
+					<th>03/08/2019</th>
+					<td><em>JoJo's Bizarre Adventure: The Animation</em> (Season 1) is now available on Netflix US and Canada!</td>
+				</tr>
+
+				<tr>
+					<th>02/15/2019</th>
+					<td><em>Jump Force</em> releases worldwide on PS4/X1/PC, featuring Jotaro and DIO as playable characters.</td>
+				</tr>
+
+				<tr>
+					<th>12/18/2018</th>
+					<td><em>JoJo's Bizarre Adventure: Last Survivor</em> is announced for Arcade systems, to be released in Summer 2019.</td>
+				</tr>
+
+				<tr>
+					<th>10/10/2018</th>
+					<td><em>JoJo's Pitter-Patter Pop!</em> releases for Android and iOS devices.</td>
+				</tr>
+
+				<tr>
+					<th>10/05/2018</th>
+					<td><em>JoJo's Bizarre Adventure: Golden Wind</em> premieres on broadcast television.</td>
+				</tr>
+
+				<tr>
+					<th>08/24/2018</th>
+					<td><em>Ripples of Adventure</em>, Araki's final event for <em>JoJo's 30th Anniversary</em> will be held.</td>
+				</tr>
+
+				<tr>
+					<th>08/18/2018</th>
+					<td>The English dub of <em>JoJo's Bizarre Adventure: Diamond is Unbreakable</em> premieres on Toonami!</td>
+				</tr>
+
+				<tr>
+					<th>07/03/2018</th>
+					<td><em>JoJo's Bizarre Adventure: Stardust Crusaders, Part 1</em> releases on Blu-ray in North America.</td>
+				</tr>
+
+				<tr>
+					<th>06/21/2018</th>
+					<td><em>JoJo's Bizarre Adventure: Golden Wind</em> TV Anime is announced to air in October 2018!</td>
+				</tr>
+
+				<tr>
+					<th>03/23/2018</th>
+					<td><em>Diamond Is Unbreakable - Chapter 1</em> will release on Blu-ray and DVD.</td>
+				</tr>
+
+				<tr>
+					<th>08/12/2017</th>
+					<td><em>JoJo Festival in Morioh, S-city</em> will begin, lasting until September 10th.</td>
+				</tr>
+
+				<tr>
+					<th>08/04/2017</th>
+					<td><em>Diamond Is Unbreakable - Chapter 1</em>, the first live-action JoJo film, premieres in Japanese theaters.</td>
+				</tr>
+
+				<tr>
+					<th>07/29/2017</th>
+					<td>The English dub of <em>JoJo's Bizarre Adventure: Stardust Crusaders</em> premieres on Toonami!</td>
+				</tr>
+
+				<tr>
+					<th>02/20/2017</th>
+					<td><em>JoJo's Bizarre Adventure: Diamond</em> Records releases for Android and iOS devices.</td>
+				</tr>
+
+				<tr>
+					<th>02/19/2017</th>
+					<td>The <em>JoJo Great Festival</em> began in Japan, celebrating the Part 4 anime.</td>
+				</tr>
+
+				<tr>
+					<th>01/01/2017</th>
+					<td>The <em>JoJo's Bizarre Adventure</em> series celebrates its 30th anniversary!</td>
+				</tr>
+
+				<tr>
+					<th>12/23/2016</th>
+					<td>The final episode of <em>JoJo's Bizarre Adventure: Diamond Is Unbreakable</em> has aired.</td>
+				</tr>
+
+				<tr>
+					<th>12/16/2016</th>
+					<td>A <em>Diamond Is Unbreakable</em> Live Action Movie is confirmed for August 4th 2017!</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+	<footer>
+		<p>&copy; Copyright Jojo's Bizzare Adventure 2021</p>
+	</footer>
+</body>
+</html>

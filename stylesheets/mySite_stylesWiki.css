@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/*
+   Jojo's Bizzare Adventure - Styles Wiki
+   Name:	Alex Paquette
+   Date:	02/11/2021
+
+*/
+
+/*Wiki Styles*/
+figcaption{
+	font-family: jojo;
+	font-size: 60%;
+	text-align: center;
+	color: purple;
+}
+
+figure img, figcaption{
+	max-width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+iframe{
+	margin-bottom: 10%;
+	margin-top: 5%;
+}
+
+div#OP p{
+	text-align: center;
+}
+
+div.paragraph p{
+	text-align: justify;
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.paragraph, figure, center {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+div.row:first-of-type figure img{
+	border-style: solid;
+	border-width: 0.3em 0.6em 0.3em 0.6em;
+	border-image: linear-gradient(rgb(255,0,233), rgb(11,88,201)) 20;
+}
+
+/* Review Section */
+
+div.Review{
+	background: #0f52ba;
+	color: white;
+	width: 100%;
+}
+
+fieldset {
+   border-width: 0px;
+	 width: 80%;
+}
+
+div.Review label#ratingLabel {
+   display: block;
+   font-size: 1.2em;
+   margin: 30px 0px 10px 0px;
+}
+
+span#stars {
+   display: inline-block;
+   margin-left: 10px;
+}
+
+input#rating {
+   font-size: 1em;
+   border-width: 0px;
+   margin-left: 8px;
+	 color: white;
+	 background-color: inherit;
+}
+
+label#reviewLabel {
+   display: block;
+   margin: 10px 0px 10px 0px;
+   font-size: 1.2em;
+}
+
+textarea#review {
+   width: 100%;
+   height: 150px;
+   padding: 5px;
+   text-align: left;
+   border: 1px solid rgb(102, 51, 0);
+}
+
+label#wordCountLabel {
+   display: block;
+   text-align: right;
+}
+
+input#wordCount {
+   width: 70px;
+   text-align: right;
+   padding: 0px 3px 0px 0px;
+   margin-left: 5px;
+   border-width: 0px;
+	 background-color: inherit;
+	 color: inherit;
+}
+
+/*sets settings for return to home page button*/
+center{
+	text-align: center;
+	width: 100%;
+}
+
+/* ===============================
+   Mobile Styles: 640px or Less
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+	figure img, figcaption{
+		width: 100%;
+	}
+	iframe{
+		width: 265px;
+		height: 144px;
+	}
+	div.Review{
+		display: none;
+	}
+}
+
+/* ===============================
+   Desktop Styles: 640px or More
+   ===============================
+*/
+@media only screen and (min-width: 641px) {
+	div.paragraph, figure {
+		width: 50%;
+	}
+	iframe{
+		width: 560px;
+		height: 315px;
+	}
+}
